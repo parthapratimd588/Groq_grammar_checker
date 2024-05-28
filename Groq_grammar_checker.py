@@ -34,4 +34,4 @@ if query:
     st.markdown(":blue[Query:]")
     st.markdown(query)
     st.markdown(":green[Response: ]")
-    st.markdown(diff.output_markdown)
+    st.markdown(diff.output_markdown, unsafe_allow_html = True)
