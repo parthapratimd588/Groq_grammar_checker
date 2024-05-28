@@ -7,9 +7,7 @@ client = Groq(
     api_key = GROQ_API_KEY,
 )
 
-system_prompt = f""" 
-Given a paragraph as query, your duty  is to check grammatical error in each sentence, and for each sentence return all correct words in green color and all wrong word in red color with a horizonal red line cut over the wrong words. Don't do anything else.
-"""
+system_prompt = "Your task is to generate multiple proofread and correct of the given query."
 query = st.text_input("Input here", placeholder = "Ask me!")
 
 if query:
