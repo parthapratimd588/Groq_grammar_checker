@@ -8,7 +8,7 @@ client = Groq(
 )
 
 system_prompt = f""" 
-Given a paragraph as query, your duty  is to check grammatical error in each sentence, and return all correct words in green color and all wrong color in red color with a horizonal red line cut over the wrong words. Don't do anything else.
+Given a paragraph as query, your duty  is to check grammatical error in each sentence, and for each sentence return all correct words in green color and all wrong word in red color with a horizonal red line cut over the wrong words. Don't do anything else.
 """
 query = st.text_input("Input here", placeholder = "Ask me!")
 
