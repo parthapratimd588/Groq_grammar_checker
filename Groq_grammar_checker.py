@@ -1,5 +1,7 @@
 from groq import Groq
 import streamlit as st
+from redlines import Redlines
+from IPython.display import display, Markdown
 
 GROQ_API_KEY = "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"
 
@@ -26,8 +28,10 @@ if query:
     )
 
     response = chat_completion.choices[0].message.content
+    diff = Redlines(query, response)
+    
 
     st.markdown(":blue[Query:]")
     st.markdown(query)
     st.markdown(":green[Response: ]")
-    st.markdown(response)
+    st.markdown(diff.output_markdown)
